@@ -11,8 +11,6 @@
 
 ### Usage
 
-    var get = require('node-get');
-    (new get('http://google.com/'))
-    .asString(function(err, str) {
-        console.log(str);
-    });
+purposely obtuse
+
+    (new(require('node-get'))('http://google.com/')).asString(console.log);
