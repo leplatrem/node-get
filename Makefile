@@ -12,6 +12,6 @@ test:
 endif
 
 doc:
-	docco lib/*.js
+	docco lib/node-get/*.js bin/node-get-file.js
 
 .PHONY: test

@@ -5,11 +5,13 @@ var path = require('path'),
     sys = require('sys'),
     get = require('node-get');
 
-var usage = 'usage:';
-usage += '\n  node-get.js <file>';
+var usage = 'usage:\n  node-get.js <file> <destination>';
 
+// Guessing destination filenames wget-style has never been
+// very robust, so require users to specify them.
 var obj = process.ARGV[2];
-if (!obj) {
+var dest = process.ARGV[3];
+if (!(obj && dest)) {
    console.log(usage);
    process.exit(1);
 }
@@ -20,7 +22,9 @@ var download = new get({
 });
 
 // Download to disk.
-download.toDisk(path.basename(obj), function(err, filename) {
+download.toDisk(dest, function(err, filename) {
+    // Print both errors and debugging messages
+    // to stderr so that eventual piping is succesfull
     if (err) {
         sys.err(err);
     } else {
