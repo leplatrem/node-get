@@ -11,4 +11,7 @@ test:
 	bin/expresso -I lib test/${only}.test.js
 endif
 
+doc:
+	docco lib/*.js
+
 .PHONY: test
