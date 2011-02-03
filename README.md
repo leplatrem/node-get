@@ -2,6 +2,12 @@
 
 `node-get` is a slightly higher-level HTTP client for nodejs.
 
+## Installation
+
+    npm install node-get
+
+node-get has no dependencies.
+
 ### Features
 
 * Redirect following.
@@ -9,8 +15,18 @@
 * Configurable binary-extension and basic binary detection.
 * Configurable headers
 
-### Usage
+### Example
 
-purposely obtuse
+    var get = require('node-get');
 
-    (new(require('node-get'))('http://google.com/')).asString(console.log);
+    var download = new get('http://google.com/');
+    download.asString(console.log);
+
+### Binary
+
+node-get includes a binary, `node-get-file.js`, which downloads 
+files either to the filesystem or to stdout.
+
+### Authors
+
+* Tom MacWright (tmcw)
