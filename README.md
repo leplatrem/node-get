@@ -8,25 +8,25 @@
 
 node-get has no dependencies.
 
-### Features
+## Features
 
 * Redirect following.
 * Convenience functions for downloading and getting data as string.
 * Configurable binary-extension and basic binary detection.
 * Configurable headers
 
-### Example
+## Example
 
     var get = require('node-get');
 
     var download = new get('http://google.com/');
     download.asString(console.log);
 
-### Binary
+## Binary
 
 node-get includes a binary, `node-get-file.js`, which downloads 
 files either to the filesystem or to stdout.
 
-### Authors
+## Authors
 
 * Tom MacWright (tmcw)
