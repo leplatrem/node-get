@@ -74,7 +74,7 @@ exports['test constructor'] = function(beforeExit) {
                 });
             }
         });
-        var p = req.toDisk('file_' + i + '.' + u.type, function(err, result) {
+        var p = req.toDisk('test_data/file_' + i + '.' + u.type, function(err, result) {
             // err && console.log(err);
             if (u.error) {
                 assert.eql(err, u.error);
