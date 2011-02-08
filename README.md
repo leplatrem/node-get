@@ -62,6 +62,12 @@ There's also a lower-level API.
 node-get includes a binary, `node-get-file.js`, which downloads 
 files either to the filesystem or to stdout.
 
+## Changelog
+
+### 0.0.2
+
+* Enhanced URL validation.
+
 ## TODO:
 
 * Retries

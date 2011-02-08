@@ -21,9 +21,14 @@ if (!(obj && dest)) {
 }
 
 // Initialize the download.
-var download = new get({
-    uri: obj
-});
+try {
+    var download = new get({
+        uri: obj
+    });
+} catch(e) {
+    sys.debug(e);
+    process.exit(1);
+}
 
 switch (dest) {
     case '-':
@@ -32,7 +37,7 @@ switch (dest) {
             // Print both errors and debugging messages
             // to stderr so that eventual piping is succesfull
             if (err) {
-                sys.err(err);
+                sys.debug(err);
             } else {
                 console.log(str);
             }
@@ -44,7 +49,7 @@ switch (dest) {
             // Print both errors and debugging messages
             // to stderr so that eventual piping is succesfull
             if (err) {
-                sys.err(err);
+                sys.debug(err);
             } else {
                 sys.debug('Downloaded to ' + filename);
             }
