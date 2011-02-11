@@ -64,13 +64,19 @@ files either to the filesystem or to stdout.
 
 ## Changelog
 
-### 0.0.2
+### 0.1.0
 
-* Enhanced URL validation.
+* The API changes in 0.1.x - Get should never be expected to throw an exception.
+* Handling of invalid URLs on redirect.
+* Handling of file-level errors.
 
 ### 0.0.3
 
 * Handling of DNS-level exceptions.
+
+### 0.0.2
+
+* Enhanced URL validation.
 
 ## TODO:
 
