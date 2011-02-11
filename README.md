@@ -68,6 +68,10 @@ files either to the filesystem or to stdout.
 
 * Enhanced URL validation.
 
+### 0.0.3
+
+* Handling of DNS-level exceptions.
+
 ## TODO:
 
 * Retries

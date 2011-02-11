@@ -3,15 +3,15 @@ var path = require('path'),
     assert = require('assert'),
     fs = require('fs');
 
-var get = require('node-get');
+var get = require('../lib/node-get');
 
 exports['test constructor'] = function(beforeExit) {
     [
         {
-            url: 'http://tilemill-data.s3.amazonaws.com/merc_box.geojson',
+            url: 'http://tilemill-data.s3amazonawscom/merc_box.geojson',
             bin: false,
             type: 'txt'
-        },
+        } /*,
         {
             url: 'http://tilemill-data.s3.amazonaws.com/couchsurf.kml',
             bin: false,
@@ -53,6 +53,7 @@ exports['test constructor'] = function(beforeExit) {
             bin: false,
             type: 'txt'
         }
+        */
     ].forEach(function(u, i) {
         var req = new get({
             uri: u.url,
