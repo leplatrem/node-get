@@ -13,6 +13,7 @@ node-get has no dependencies.
 * Redirect following.
 * Convenience functions for downloading and getting data as string.
 * Binary-extension and basic binary detection.
+* Configurable headers
 
 ## API
 
@@ -50,6 +51,14 @@ There's also a lower-level API.
         // HTTP request, except handling redirects
     });
 
+
+If you give node-get an object of settings instead of a string,
+it accepts
+
+* `uri` - the address of the resource
+* `headers` - to replace its default headers with custom ones
+* `max_redirs` - the number of redirects to follow before returning an error
+
 ## Example
 
     var get = require('node-get');
@@ -66,6 +75,7 @@ files either to the filesystem or to stdout.
 
 ### 0.1.0
 
+* `max_redirs`, `headers` options in node-get constructor
 * The API changes in 0.1.x - Get should never be expected to throw an exception.
 * Handling of invalid URLs on redirect.
 * Handling of file-level errors.
@@ -84,7 +94,6 @@ files either to the filesystem or to stdout.
 * Tested HTTPS
 * Guessing encoding wth headers
 * User-customizable encodings
-* Configurable headers
 
 ## Authors
 

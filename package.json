@@ -1,6 +1,6 @@
 {
   "name"          : "node-get",
-  "version"       : "0.0.3",
+  "version"       : "0.1.0",
   "main"          : "./lib/node-get/index.js",
   "description"   : "A slightly higher-level HTTP client for node.",
   "keywords"      : ["http", "client"],
